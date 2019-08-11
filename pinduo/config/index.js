@@ -11,13 +11,20 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        'api':{
-          target:'http//loaclhost:8080',
-          changeOrigin: true,
+        '/api':{
+          target:'http://localhost:3000/',
+          changeOrigin:true,
           pathRewrite:{
-            '^api':''
+            '^/api':''
           }
-        }
+        },
+      //   '/api':{
+      //     target:"http://localhost:3000/",
+      //     changeOrigin:true,
+      //     pathRewrite:{
+      //         '^/api':''
+      //     }
+      // }
     },
 
     // Various Dev Server settings

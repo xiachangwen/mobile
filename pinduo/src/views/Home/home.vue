@@ -2,7 +2,9 @@
     <div class="main">
         
         <div class="home">
-            首页
+            <Naver />
+
+            <!-- {{swiperList}} -->
         </div>
 
 
@@ -10,12 +12,13 @@
     </div>
 </template>
 <script>
+import Naver from '../../components/naver'
 export default {
     props:{
 
     },
     components:{
-
+        Naver
     },
     data(){
         return {
@@ -23,13 +26,13 @@ export default {
         }
     },
     computed:{
-
+        
     },
     methods:{
-
+        
     },
     created(){
-
+      
     },
     mounted(){
 
@@ -42,9 +45,11 @@ export default {
    height: 100%;
    display: flex;
    flex-direction: column;
+   overflow: hidden;
 }
 
 .home{
     flex: 1;
+    overflow-y: auto;
 }
 </style>
